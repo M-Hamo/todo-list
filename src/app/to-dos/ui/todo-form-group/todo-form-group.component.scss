@@ -1,0 +1,47 @@
+$bg-01b2aa: #01b2aa;
+
+form {
+  padding: 0;
+  margin: 0;
+}
+
+input {
+  height: 35px;
+  width: 70%;
+  border-radius: 8px;
+  padding: 0 8px;
+  font-size: 12.5px;
+  border: 2px solid #e5e5e5;
+
+  &:focus {
+    outline-color: $bg-01b2aa;
+  }
+}
+
+.invalid {
+  border: 2px solid red;
+  outline-color: red;
+}
+
+h3 {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.actions {
+  gap: 10px;
+
+  button {
+    height: 35px;
+    width: 35px;
+    border: none;
+    outline: none;
+    border-radius: 100%;
+    cursor: pointer;
+
+    img {
+      height: 20px;
+      width: 20px;
+    }
+  }
+}

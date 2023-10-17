@@ -1,6 +1,8 @@
 import { NgModule, Type } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AppComponent } from './app.component';
+import { ContainerComponent } from './layout/container/container.component';
+import { HeaderComponent } from './layout/header/header.component';
 
 export const routes: Routes = [
   {
@@ -10,8 +12,16 @@ export const routes: Routes = [
   },
   {
     path: 'to-do',
-    // component: ForbiddenComponent,
+    component: ContainerComponent,
     title: 'To-Do List',
+    children: [
+      {
+        path: '',
+        loadChildren: () =>
+          import('./to-dos/to-dos.module').then((m) => m.ToDosModule),
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '**',
@@ -29,5 +39,9 @@ export const routes: Routes = [
   exports: [RouterModule],
 })
 export class AppRoutingModule {
-  public static Components: Array<Type<any> | any[]> = [AppComponent];
+  public static Components: Array<Type<any> | any[]> = [
+    AppComponent,
+    ContainerComponent,
+    HeaderComponent,
+  ];
 }

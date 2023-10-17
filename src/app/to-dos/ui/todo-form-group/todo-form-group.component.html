@@ -1,0 +1,53 @@
+<form
+  [formGroup]="todoForm"
+  class="flex justify-between items-center"
+  (ngSubmit)="onSaveValue()"
+>
+  <input
+    *ngIf="editMode()"
+    #nameInput
+    [autofocus]="true"
+    [class.invalid]="name.invalid"
+    [formControl]="name"
+    placeholder="Name"
+  />
+
+  <h3 *ngIf="!editMode()">{{ this.todoForm.get("name")?.value }}</h3>
+
+  <div class="actions flex justify-center items-center">
+    <ng-container *ngIf="!editMode()">
+      <button
+        type="button"
+        class="flex justify-center items-center"
+        (click)="onEditTodo()"
+      >
+        <img src="assets/icons/edit-pencil-svgrepo-com.svg" alt="Edit" />
+      </button>
+
+      <button
+        type="button"
+        class="flex justify-center items-center"
+        (click)="onDeleteTodo.emit()"
+      >
+        <img src="assets/icons/delete-trash-svgrepo-com.svg" alt="Edit" />
+      </button>
+    </ng-container>
+
+    <ng-container *ngIf="editMode()">
+      <button type="submit" class="flex justify-center items-center">
+        <img
+          src="assets/icons/correct-success-tick-svgrepo-com.svg"
+          alt="Edit"
+        />
+      </button>
+
+      <button
+        type="button"
+        class="flex justify-center items-center"
+        (click)="onCancelEdit()"
+      >
+        <img src="assets/icons/cancel-error-svgrepo-com.svg" alt="Edit" />
+      </button>
+    </ng-container>
+  </div>
+</form>

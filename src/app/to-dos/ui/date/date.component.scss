@@ -1,0 +1,23 @@
+.date {
+  padding-bottom: 40px;
+
+  .month-year {
+    gap: 5px;
+  }
+
+  .day {
+    font-size: 25px;
+    font-weight: 600;
+  }
+
+  .day-text,
+  .month {
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .year {
+    font-size: 11px;
+    font-weight: 400;
+  }
+}

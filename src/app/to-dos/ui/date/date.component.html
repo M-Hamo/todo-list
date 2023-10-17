@@ -1,0 +1,21 @@
+<div class="date flex justify-between items-center">
+  <div class="month-year flex justify-center items-center">
+    <span
+      [@animate]="{ value: '*', params: { y: '-20px', delay: '300ms' } }"
+      class="day"
+      >{{ toDay | date : "d" }}</span
+    >
+
+    <div class="flex flex-col justify-center items-center">
+      <span class="month">{{ toDay | date : "MMM" | uppercase }}</span>
+      <span class="year">{{ toDay | date : "YYYY" }}</span>
+    </div>
+  </div>
+
+  <div
+    [@animate]="{ value: '*', params: { x: '-20px', delay: '300ms' } }"
+    class="day-text flex justify-center items-center"
+  >
+    {{ toDay | date : "EEEE" | uppercase }}
+  </div>
+</div>

@@ -8,27 +8,115 @@
   --nav-border: #d3d3d3;
 }
 
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.flex {
+  display: flex !important;
 }
 
-.flex-content-start {
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
+.flex-row {
+  flex-direction: row !important;
 }
 
-.flex-between {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.flex-col {
+  flex-direction: column !important;
 }
 
-.flex-col-stretch {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: stretch;
+.flex-1 {
+  flex: 1 1 0%;
+}
+
+.justify-start {
+  justify-content: flex-start !important;
+}
+
+.justify-center {
+  justify-content: center !important;
+}
+
+.justify-end {
+  justify-content: end !important;
+}
+
+.justify-between {
+  justify-content: space-between !important;
+}
+
+.items-start {
+  align-items: start !important;
+}
+
+.items-center {
+  align-items: center !important;
+}
+
+.items-end {
+  align-items: end !important;
+}
+
+.items-stretch {
+  align-items: stretch !important;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.text-start {
+  text-align: start !important;
+}
+
+.text-end {
+  text-align: end !important;
+}
+
+.font12 {
+  font-size: 0.75rem !important;
+}
+.font16 {
+  font-size: 1rem !important;
+}
+.font20 {
+  font-size: 1.25rem !important;
+}
+.font18 {
+  font-size: 1.125rem !important;
+}
+.font9 {
+  font-size: 0.5625rem !important;
+}
+.font14 {
+  font-size: 0.875rem !important;
+}
+.font10 {
+  font-size: 0.625rem !important;
+}
+.font11 {
+  font-size: 0.6875rem !important;
+}
+
+html,
+body {
+  font-family: "serif";
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: whitesmoke;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html:lang(ar)* {
+  text-align: right;
+}
+
+.hidden {
+  display: none !important;
+}
+button {
+  font-family: "serif" !important;
 }
