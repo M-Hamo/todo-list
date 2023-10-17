@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1697573026382,
+  "timestamp": 1697573421289,
   "index": "/todo-list/index.html",
   "assetGroups": [
     {
@@ -11,13 +11,13 @@
         "ignoreVary": true
       },
       "urls": [
-        "/todo-list/23.a548f053cf014235.js",
+        "/todo-list/941.b7c8173d8c057128.js",
         "/todo-list/favicon.ico",
         "/todo-list/index.html",
-        "/todo-list/main.0f0496336dfbb543.js",
+        "/todo-list/main.dec7e9d33b3c9f9e.js",
         "/todo-list/manifest.webmanifest",
         "/todo-list/polyfills.68e90daf8691fa67.js",
-        "/todo-list/runtime.d41da47144c19a7b.js",
+        "/todo-list/runtime.7c444d4d09296f9d.js",
         "/todo-list/styles.6c22f709a3a456ef.css"
       ],
       "patterns": []
@@ -69,7 +69,7 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/todo-list/23.a548f053cf014235.js": "7545881c2d8b8173ff3ae1b174ca3fdfdec0814a",
+    "/todo-list/941.b7c8173d8c057128.js": "359832bb28e7cb7a81545c1b1f32f2bb933576b2",
     "/todo-list/JF-Flat-regular.681a12a55c9e0c3a.ttf": "6e2de4de6f30a45377f771cc54267564ce87a6ef",
     "/todo-list/assets/fonts/jalal/JalalLTBold.otf": "0752a81e5ee2c04f63463f86a965f3a41debe519",
     "/todo-list/assets/fonts/jalal/JalalLTLight.otf": "2b0c67f737b5398183ca2ea9473e39fd64dafa40",
@@ -104,11 +104,11 @@
     "/todo-list/assets/images/istockphoto.jpg": "e0bc383e11f7a05e391bbf37dd75a3c37a1c135b",
     "/todo-list/assets/images/not-found-plug-amico.svg": "7249b7b32356f6426ebf102edd2d872327915edb",
     "/todo-list/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "/todo-list/index.html": "1c0a17a0a3d9dc2e683b5c9e04afc2988658c552",
-    "/todo-list/main.0f0496336dfbb543.js": "61aa7c47912a80f33badc8d9defeca4857553c76",
+    "/todo-list/index.html": "c0eaea698dc447e9bc0e0660c4023f77b82b37be",
+    "/todo-list/main.dec7e9d33b3c9f9e.js": "618e41e4ded8ee13dfb86c4e61c374f0f239f535",
     "/todo-list/manifest.webmanifest": "9470b23185051fd04b5d805f3f67d282efc30517",
     "/todo-list/polyfills.68e90daf8691fa67.js": "313cbfc394da461313d1ffa1a48f789cf1e969dc",
-    "/todo-list/runtime.d41da47144c19a7b.js": "5670f3528d4822a9893627bceb6637c65f85b9a1",
+    "/todo-list/runtime.7c444d4d09296f9d.js": "d53dc0e6bbac872f5144a616c20516f5a5fe3e9a",
     "/todo-list/styles.6c22f709a3a456ef.css": "0d47dbe6d6293701fded07e199f559d087e84d34"
   },
   "navigationUrls": [
