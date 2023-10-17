@@ -11,17 +11,14 @@
       <div class="rectangular flex justify-between items-center">
         <div class="flex justify-center items-center">
           <div class="qrcode flex justify-center items-center">
-            <img src="../../../assets/icons/qrcode.svg" alt="qrcode" />
+            <img src="assets/icons/qrcode.svg" alt="qrcode" />
           </div>
 
           <button
             class="localization flex justify-center items-center"
             (click)="toggleLang()"
           >
-            <img
-              src="../../../assets/icons/world-svgrepo-com.svg"
-              alt="local"
-            />
+            <img src="assets/icons/world-svgrepo-com.svg" alt="local" />
             <span class="font20">{{ selectedLang() }}</span>
           </button>
         </div>
@@ -44,7 +41,7 @@
         >
           <h2 class="text-center">{{ "staffManagement" | translate }}</h2>
           <img
-            src="../../../assets/icons/linkedin.svg"
+            src="assets/icons/linkedin.svg"
             [alt]="'staffManagement' | translate"
           />
         </a>
