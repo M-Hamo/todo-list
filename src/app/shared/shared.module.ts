@@ -3,14 +3,13 @@ import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ShimmerLoadingComponent } from './components/shimmer-loading/shimmer-loading.component';
-import { NoDataComponent } from './components/no-data/no-data.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 const DIRECTIVES: any[] = [];
 
 const PIPES: any[] = [];
 
-const UI_COMPONENTS: any[] = [NoDataComponent];
+const UI_COMPONENTS: any[] = [];
 
 const THIRD_MODULES: any[] = [
   ShimmerLoadingComponent,

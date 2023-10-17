@@ -10,7 +10,7 @@
         class="flex-1"
         type="text"
       />
-      <img src="../../../assets/icons/search-icon.svg" alt="search" />
+      <img src="assets/icons/search-icon.svg" alt="search" />
     </div>
 
     <div
@@ -46,7 +46,7 @@
 
       <div class="add-btn flex justify-center items-center">
         <button class="flex justify-center items-center" (click)="onAddTodo()">
-          <img src="../../../assets/icons/add-svgrepo.svg" alt="add-todo" />
+          <img src="assets/icons/add-svgrepo.svg" alt="add-todo" />
         </button>
       </div>
     </div>
@@ -58,7 +58,7 @@
     class="no-results flex flex-col justify-center items-center"
     style="gap: 8px"
   >
-    <img src="../../../../assets/icons/empty-result.svg" alt="No results" />
+    <img src="assets/icons/empty-result.svg" alt="No results" />
 
     <p>
       {{ (!!search.value ? "noSearchResult" : "noTodoYet") | translate }}
