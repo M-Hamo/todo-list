@@ -2,9 +2,7 @@ import { Direction, Directionality } from '@angular/cdk/bidi';
 import { Injectable, Signal, computed, inject } from '@angular/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 
-@Injectable({
-  providedIn: 'root',
-})
+@Injectable({ providedIn: 'root' })
 export class BidirectionallyService {
   private readonly _dir: Directionality = inject(Directionality);
 

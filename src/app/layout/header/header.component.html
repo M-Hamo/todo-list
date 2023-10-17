@@ -2,15 +2,28 @@
   <div class="flex justify-start items-center background">
     <div class="flex justify-center items-center">
       <div class="rectangular"></div>
-      <div class="triangle"></div>
+      <div [class]="'triangle-' + direction()"></div>
     </div>
   </div>
 
   <div class="sub-header flex justify-start items-center">
     <div class="sub-h-1 flex justify-center items-center">
       <div class="rectangular flex justify-between items-center">
-        <div class="qrcode flex justify-center items-center">
-          <img src="../../../assets/icons/qrcode.svg" alt="qrcode" />
+        <div class="flex justify-center items-center">
+          <div class="qrcode flex justify-center items-center">
+            <img src="../../../assets/icons/qrcode.svg" alt="qrcode" />
+          </div>
+
+          <button
+            class="localization flex justify-center items-center"
+            (click)="toggleLang()"
+          >
+            <img
+              src="../../../assets/icons/world-svgrepo-com.svg"
+              alt="local"
+            />
+            <span class="font20">{{ selectedLang() }}</span>
+          </button>
         </div>
 
         <div class="flex flex-col title">
@@ -18,19 +31,22 @@
           <h1 class="text-center">Task Management System</h1>
         </div>
       </div>
-      <div class="triangle"></div>
+      <div [class]="'triangle-' + direction()"></div>
     </div>
 
     <div class="sub-h-2 flex justify-center items-center">
-      <div class="triangle"></div>
+      <div [class]="'triangle-' + direction()"></div>
       <div class="rectangular flex justify-end items-center">
         <a
           href="https://www.linkedin.com/in/mohamed-eldeeb-94a3b11a4/"
           target="_blank"
           class="staff-management flex justify-center items-center"
         >
-          <h2 class="text-center">ادارة الموظفين</h2>
-          <img src="../../../assets/icons/linkedin.svg" alt="ادارة الموظفين" />
+          <h2 class="text-center">{{ "staffManagement" | translate }}</h2>
+          <img
+            src="../../../assets/icons/linkedin.svg"
+            [alt]="'staffManagement' | translate"
+          />
         </a>
       </div>
     </div>

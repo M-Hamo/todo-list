@@ -4,7 +4,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { ShimmerLoadingComponent } from './components/shimmer-loading/shimmer-loading.component';
 import { NoDataComponent } from './components/no-data/no-data.component';
-import { LanguageComponent } from './components/language/language.component';
 import { TranslateModule } from '@ngx-translate/core';
 
 const DIRECTIVES: any[] = [];
@@ -15,7 +14,6 @@ const UI_COMPONENTS: any[] = [NoDataComponent];
 
 const THIRD_MODULES: any[] = [
   ShimmerLoadingComponent,
-  LanguageComponent,
   NgOptimizedImage,
   TranslateModule,
 ];
