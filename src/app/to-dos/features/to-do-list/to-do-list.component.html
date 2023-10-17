@@ -20,20 +20,26 @@
       <div class="flex flex-col justify-start items-stretch">
         <date />
 
-        <div class="flex flex-col justify-start items-stretch" style="gap: 5px">
-          <ng-container *ngIf="todoListFormArray?.controls?.length">
-            <ng-container
-              *ngFor="
-                let todoForm of (todoListFormArray | search : search.value)
-                  ?.controls;
-                let index = index
-              "
-            >
-              <todo-form-group
-                [todoForm]="todoForm"
-                (onDeleteTodo)="onDeleteTodo(todoForm)"
-              />
-            </ng-container>
+        <div
+          *ngIf="todoListItems()?.length; else noResults"
+          class="todo-items flex flex-col justify-start items-stretch"
+          style="gap: 5px"
+        >
+          <ng-container
+            *ngFor="
+              let todo of todoListItems() | search : search.value;
+              let index = index
+            "
+          >
+            <todo-form-group
+              [@animate]="{
+                value: '*',
+                params: { x: '-200px', delay: '200ms' }
+              }"
+              [todo]="todo"
+              (onEditTodo)="onEditTodo($event)"
+              (onDeleteTodo)="onDeleteTodo(todo)"
+            />
           </ng-container>
         </div>
       </div>
@@ -46,3 +52,16 @@
     </div>
   </div>
 </section>
+
+<ng-template #noResults>
+  <div
+    class="no-results flex flex-col justify-center items-center"
+    style="gap: 8px"
+  >
+    <img src="../../../../assets/icons/empty-result.svg" alt="No results" />
+
+    <p>
+      {{ (!!search.value ? "noSearchResult" : "noTodoYet") | translate }}
+    </p>
+  </div>
+</ng-template>

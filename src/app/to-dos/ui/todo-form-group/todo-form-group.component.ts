@@ -3,13 +3,14 @@ import {
   ElementRef,
   EventEmitter,
   Input,
+  OnInit,
   Output,
   ViewChild,
   WritableSignal,
   signal,
 } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { TodoFormGroup } from '../../utils';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ToDo } from '../../utils';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
 
@@ -18,35 +19,46 @@ import { TranslateService } from '@ngx-translate/core';
   templateUrl: './todo-form-group.component.html',
   styleUrls: ['./todo-form-group.component.scss'],
 })
-export class TodoFormGroupComponent {
+export class TodoFormGroupComponent implements OnInit {
   public constructor(
+    private readonly _fb: FormBuilder,
     private readonly _toasterService: ToastrService,
     private readonly _translateService: TranslateService
   ) {}
   @ViewChild('nameInput') public nameInput!: ElementRef<HTMLInputElement>;
 
-  @Input({ required: true }) public todoForm!: FormGroup<TodoFormGroup>;
+  @Input({ required: true }) public todo!: ToDo;
+
+  @Output() public readonly onEditTodo = new EventEmitter<ToDo>();
 
   @Output() public readonly onDeleteTodo = new EventEmitter<unknown>();
 
-  public name: FormControl<string | null> = new FormControl(
-    null,
-    Validators.required
-  );
+  public todoForm: FormGroup<any> = this._fb.group({
+    name: [null, Validators.required],
+  });
 
   private _cashedValue: WritableSignal<string> = signal<string>('');
 
   public editMode: WritableSignal<boolean> = signal<boolean>(true);
 
-  public onEditTodo = (): void => {
+  public ngOnInit(): void {
+    if (!!this.todo?.name) {
+      setTimeout(() => this.todoForm.patchValue({ name: this.todo?.name }));
+      this._cashedValue.set(this.todo?.name);
+      this.editMode.set(false);
+    }
+  }
+
+  public editTodo = (): void => {
     this.editMode.set(true);
 
     window.setTimeout(() => this.nameInput.nativeElement.focus());
   };
 
   public onSaveValue = (): void => {
-    if (this.name.valid) {
-      this.todoForm.get('name')?.patchValue(this.name.value);
+    if (this.todoForm.valid) {
+      const name: string = this.todoForm.get('name')?.value as string;
+      this.onEditTodo.emit({ ...this.todo, name });
 
       this._toasterService.success(
         this._translateService.instant(
@@ -54,18 +66,21 @@ export class TodoFormGroupComponent {
         )
       );
 
-      this._cashedValue.set(this.name?.value as string);
+      this._cashedValue.set(name);
       this.editMode.set(false);
     }
   };
 
   public onCancelEdit = (): void => {
-    if (this.todoForm.get('name')?.invalid) {
-      this.onDeleteTodo.emit();
-      return;
+    if (this.todoForm?.invalid) {
+      !!this._cashedValue() &&
+        this.todoForm.patchValue({ name: this._cashedValue() });
     }
 
-    this.todoForm.get('name')?.patchValue(this._cashedValue());
+    !!this._cashedValue()
+      ? this.todoForm.patchValue({ name: this._cashedValue() })
+      : this.onDeleteTodo.emit();
+
     this.editMode.set(false);
   };
 }

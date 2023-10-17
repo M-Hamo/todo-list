@@ -7,19 +7,25 @@
     *ngIf="editMode()"
     #nameInput
     [autofocus]="true"
-    [class.invalid]="name.invalid"
-    [formControl]="name"
+    [class.invalid]="todoForm.invalid"
+    formControlName="name"
     placeholder="Name"
   />
 
-  <h3 *ngIf="!editMode()">{{ this.todoForm.get("name")?.value }}</h3>
+  <h3 *ngIf="!editMode()">
+    {{
+      this.todoForm.get("name")?.value?.length > 25
+        ? (this.todoForm.get("name")?.value | slice : 0 : 25) + ".."
+        : this.todoForm.get("name")?.value
+    }}
+  </h3>
 
   <div class="actions flex justify-center items-center">
     <ng-container *ngIf="!editMode()">
       <button
         type="button"
         class="flex justify-center items-center"
-        (click)="onEditTodo()"
+        (click)="editTodo()"
       >
         <img src="assets/icons/edit-pencil-svgrepo-com.svg" alt="Edit" />
       </button>

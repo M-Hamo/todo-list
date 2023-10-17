@@ -3,5 +3,7 @@
   "todoUpdateSuccess": "Todo updated successfully",
   "todoDeletedSuccess": "Todo Deleted successfully",
   "checkInvalidInputs": "Check invalid inputs or complete opened first!",
-  "search": "Search.."
+  "search": "Search..",
+  "noSearchResult": "No search results matches your search!",
+  "noTodoYet": "There is no todos yet!"
 }

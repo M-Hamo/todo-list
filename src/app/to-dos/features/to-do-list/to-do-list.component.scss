@@ -53,6 +53,18 @@ $bg-01b2aa: #01b2aa;
   box-shadow: 0px 0px 78px -65px rgba(0, 0, 0, 0.32);
 }
 
+.todo-items {
+  max-height: 39dvh;
+  overflow-y: auto;
+}
+
+.no-results {
+  p {
+    font-size: 12px;
+    font-weight: 600;
+  }
+}
+
 .add-btn button {
   height: 80px;
   width: 80px;
@@ -83,6 +95,11 @@ $bg-01b2aa: #01b2aa;
     padding: 25px;
   }
 
+  .todo-items {
+    max-height: 29dvh;
+    overflow-y: auto;
+  }
+
   .date {
     padding-bottom: 25px;
   }
@@ -108,8 +125,13 @@ $bg-01b2aa: #01b2aa;
   }
 
   .list {
-    height: 50dvh;
+    height: 60dvh;
     padding: 15px;
+  }
+
+  .todo-items {
+    max-height: 39dvh;
+    overflow-y: auto;
   }
 
   .date {

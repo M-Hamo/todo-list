@@ -3,5 +3,7 @@
   "todoUpdateSuccess": "تم تحديث مهمة بنجاح",
   "todoDeletedSuccess": "تم حذف مهمة بنجاح",
   "checkInvalidInputs": "تفقد الحقول الغير صالحة أو قم بملئ الحقول اولا!",
-  "search": "بحث.."
+  "search": "بحث..",
+  "noSearchResult": "لا يوجد اي نتائج مطابقة للبحث!",
+  "noTodoYet": "لا يوجد اي مهمات بعد!"
 }

@@ -1,19 +1,15 @@
 import { Injectable, WritableSignal, effect, signal } from '@angular/core';
-import { ToDo, TodoFormGroup } from '../utils';
+import { ToDo } from '../utils';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
-import { FormArray, FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Injectable({ providedIn: 'root' })
 export class ToDoService {
   public constructor(
-    private readonly _fb: FormBuilder,
     private readonly _toasterService: ToastrService,
     private readonly _translateService: TranslateService
   ) {
     this.getList();
-
-    this.todoListFormArray.valueChanges.subscribe(console.log);
   }
 
   public readonly todoListItems: WritableSignal<ToDo[]> = signal([]);
@@ -22,50 +18,47 @@ export class ToDoService {
     localStorage.setItem(TODO_LIST, JSON.stringify(this.todoListItems()));
   });
 
-  public form: FormGroup<any> = this._fb.group({
-    todoList: this._fb.array([]),
-  });
-
-  public get todoListFormArray(): FormArray<FormGroup<TodoFormGroup>> {
-    return this.form.get('todoList') as FormArray<FormGroup<TodoFormGroup>>;
-  }
-
-  public addTodo = (name?: string): void => {
-    if (!this.todoListItems()[this.todoListItems()?.length - 1]?.name) {
+  public addTodo = (): void => {
+    if (
+      this.todoListItems()?.length >= 1 &&
+      !this.todoListItems()[this.todoListItems()?.length - 1]?.name
+    ) {
       this._toasterService.error(
         this._translateService.instant('checkInvalidInputs')
       );
 
-      // this.todoListFormArray.markAllAsTouched();
       return;
     }
 
     const id: string = this.generateUniqueId();
 
-    this.todoListItems.mutate((list: ToDo[]) =>
-      list.push({ id, name: name as string })
-    );
-    // this.todoListFormArray.push(this.todoFormGroup());
+    this.todoListItems.set([...this.todoListItems(), { id, name: '' }]);
   };
 
-  public deleteTodoItem = (formGroup: FormGroup<TodoFormGroup>): void => {
-    // if()
-    const index: number = this.todoListFormArray
-      .getRawValue()
-      ?.findIndex((group) => group?.id == formGroup?.value?.id);
+  public updateTodo = (todo: ToDo): void => {
+    if (!!todo?.id) {
+      const editedList: ToDo[] = this.todoListItems().map((toDo: ToDo) =>
+        toDo?.id === todo?.id ? todo : toDo
+      );
 
-    this.todoListFormArray.removeAt(index);
+      this.todoListItems.set(editedList);
 
-    this._toasterService.success(
-      this._translateService.instant('todoDeletedSuccess')
-    );
+      return;
+    }
   };
 
-  public todoFormGroup = (todo?: ToDo): FormGroup<TodoFormGroup> => {
-    return this._fb.group({
-      id: todo?.id || this.generateUniqueId(),
-      name: [todo?.name || '', Validators.required],
-    });
+  public deleteTodoItem = (todo: ToDo): void => {
+    if (!!todo?.id) {
+      const filteredList: ToDo[] = this.todoListItems().filter(
+        (toDo: ToDo) => toDo?.id !== todo?.id
+      );
+
+      this.todoListItems.set(filteredList);
+
+      this._toasterService.success(
+        this._translateService.instant('todoDeletedSuccess')
+      );
+    }
   };
 
   private generateUniqueId = (): string => {
@@ -76,9 +69,11 @@ export class ToDoService {
   };
 
   private getList = (): void => {
-    const todoList = localStorage.getItem(TODO_LIST)
-      ? localStorage.getItem(TODO_LIST)
+    const todoList: any = !!localStorage.getItem(TODO_LIST)
+      ? JSON.parse(localStorage.getItem(TODO_LIST) as string)
       : [];
+
+    this.todoListItems.set(todoList);
   };
 }
 
