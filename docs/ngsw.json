@@ -1,0 +1,133 @@
+{
+  "configVersion": 1,
+  "timestamp": 1697572678058,
+  "index": "/todo-list/index.html",
+  "assetGroups": [
+    {
+      "name": "app",
+      "installMode": "prefetch",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/todo-list/23.a548f053cf014235.js",
+        "/todo-list/favicon.ico",
+        "/todo-list/index.html",
+        "/todo-list/main.0f0496336dfbb543.js",
+        "/todo-list/manifest.webmanifest",
+        "/todo-list/polyfills.68e90daf8691fa67.js",
+        "/todo-list/runtime.d41da47144c19a7b.js",
+        "/todo-list/styles.6c22f709a3a456ef.css"
+      ],
+      "patterns": []
+    },
+    {
+      "name": "assets",
+      "installMode": "lazy",
+      "updateMode": "prefetch",
+      "cacheQueryOptions": {
+        "ignoreVary": true
+      },
+      "urls": [
+        "/todo-list/JF-Flat-regular.681a12a55c9e0c3a.ttf",
+        "/todo-list/assets/fonts/jalal/JalalLTBold.otf",
+        "/todo-list/assets/fonts/jalal/JalalLTLight.otf",
+        "/todo-list/assets/fonts/jzoor/JF-Flat-regular.eot",
+        "/todo-list/assets/fonts/jzoor/JF-Flat-regular.svg",
+        "/todo-list/assets/fonts/jzoor/JF-Flat-regular.ttf",
+        "/todo-list/assets/fonts/jzoor/JF-Flat-regular.woff",
+        "/todo-list/assets/i18n/ar.json",
+        "/todo-list/assets/i18n/en.json",
+        "/todo-list/assets/icons/add-svgrepo.svg",
+        "/todo-list/assets/icons/cancel-error-svgrepo-com.svg",
+        "/todo-list/assets/icons/correct-success-tick-svgrepo-com.svg",
+        "/todo-list/assets/icons/delete-trash-svgrepo-com.svg",
+        "/todo-list/assets/icons/edit-pencil-svgrepo-com.svg",
+        "/todo-list/assets/icons/empty-result.svg",
+        "/todo-list/assets/icons/icon-128x128.png",
+        "/todo-list/assets/icons/icon-144x144.png",
+        "/todo-list/assets/icons/icon-152x152.png",
+        "/todo-list/assets/icons/icon-192x192.png",
+        "/todo-list/assets/icons/icon-384x384.png",
+        "/todo-list/assets/icons/icon-512x512.png",
+        "/todo-list/assets/icons/icon-72x72.png",
+        "/todo-list/assets/icons/icon-96x96.png",
+        "/todo-list/assets/icons/linkedin.svg",
+        "/todo-list/assets/icons/qrcode.svg",
+        "/todo-list/assets/icons/search-icon.svg",
+        "/todo-list/assets/icons/world-svgrepo-com.svg",
+        "/todo-list/assets/images/403 Error Forbidden-bro.svg",
+        "/todo-list/assets/images/404-Error-pana.svg",
+        "/todo-list/assets/images/flags/ar.svg",
+        "/todo-list/assets/images/flags/en.svg",
+        "/todo-list/assets/images/istockphoto.jpg",
+        "/todo-list/assets/images/not-found-plug-amico.svg"
+      ],
+      "patterns": []
+    }
+  ],
+  "dataGroups": [],
+  "hashTable": {
+    "/todo-list/23.a548f053cf014235.js": "7545881c2d8b8173ff3ae1b174ca3fdfdec0814a",
+    "/todo-list/JF-Flat-regular.681a12a55c9e0c3a.ttf": "6e2de4de6f30a45377f771cc54267564ce87a6ef",
+    "/todo-list/assets/fonts/jalal/JalalLTBold.otf": "0752a81e5ee2c04f63463f86a965f3a41debe519",
+    "/todo-list/assets/fonts/jalal/JalalLTLight.otf": "2b0c67f737b5398183ca2ea9473e39fd64dafa40",
+    "/todo-list/assets/fonts/jzoor/JF-Flat-regular.eot": "50c674e09470c964116f82ab9120290e76bc8d78",
+    "/todo-list/assets/fonts/jzoor/JF-Flat-regular.svg": "ab50793198168d70cca7f12e45b3a873d03643f2",
+    "/todo-list/assets/fonts/jzoor/JF-Flat-regular.ttf": "6e2de4de6f30a45377f771cc54267564ce87a6ef",
+    "/todo-list/assets/fonts/jzoor/JF-Flat-regular.woff": "21da494b4f4c242175fb2088686fde64f21d121c",
+    "/todo-list/assets/i18n/ar.json": "1adb134ef0cb15936e0a9fade9012ad111fbe1fa",
+    "/todo-list/assets/i18n/en.json": "fd5aa4f9c71dd996f8ce327c0d07f41994e35e01",
+    "/todo-list/assets/icons/add-svgrepo.svg": "0dd529d03348424f79b4773764341000044879c3",
+    "/todo-list/assets/icons/cancel-error-svgrepo-com.svg": "50c965cdc9e1739a8f2df8b4b2d1607dc37b037e",
+    "/todo-list/assets/icons/correct-success-tick-svgrepo-com.svg": "a41b9a33c9b2f768f9ff5ff7dcc8944cade2da52",
+    "/todo-list/assets/icons/delete-trash-svgrepo-com.svg": "e7b18eb01debcbe09737fe0f32fe185d8735dcbe",
+    "/todo-list/assets/icons/edit-pencil-svgrepo-com.svg": "1d79e013a41427f0e9b5906470257945e5c99bf6",
+    "/todo-list/assets/icons/empty-result.svg": "2036e695c28657649b20935c063aa4028a9eb669",
+    "/todo-list/assets/icons/icon-128x128.png": "b1f06c7d714abb4a0cc4d1f7c954feb26826e4c4",
+    "/todo-list/assets/icons/icon-144x144.png": "96a0d629765c1bc85d9263c6bc83094ca776d267",
+    "/todo-list/assets/icons/icon-152x152.png": "b1fbbee3902eb96a7658e3bb006f31f78ca5a44c",
+    "/todo-list/assets/icons/icon-192x192.png": "e4211163bf0911688fbfb80278d8ff4d2f77691d",
+    "/todo-list/assets/icons/icon-384x384.png": "329749cd6393768d3131ed6304c136b1ca05f2fd",
+    "/todo-list/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
+    "/todo-list/assets/icons/icon-72x72.png": "279825a1ac4377032ae996a1832c641e33ccf1b6",
+    "/todo-list/assets/icons/icon-96x96.png": "592885efcbfee27e5e20be4fa3043589390d2740",
+    "/todo-list/assets/icons/linkedin.svg": "3635ec11dd7d19d405ac971420311f36bfccf0b4",
+    "/todo-list/assets/icons/qrcode.svg": "77707fcaa5b22411022fa29e8b905ecb1c609c48",
+    "/todo-list/assets/icons/search-icon.svg": "bfc301df199e5a919f9091ada185b4f207fb6636",
+    "/todo-list/assets/icons/world-svgrepo-com.svg": "b9269dcc8a33a91bffde0a8580c354fde07e4970",
+    "/todo-list/assets/images/403 Error Forbidden-bro.svg": "f9c0ea7d95523b024bb02bd77c5065fb9a542177",
+    "/todo-list/assets/images/404-Error-pana.svg": "d433b24cf06349db23b91447645e1cf8b0d7d884",
+    "/todo-list/assets/images/flags/ar.svg": "6cbb0cc1c6338c98a82db844b04860c86a52fd70",
+    "/todo-list/assets/images/flags/en.svg": "c6ee30adcd50b07ef1943b74bd5b970794eaa9f5",
+    "/todo-list/assets/images/istockphoto.jpg": "e0bc383e11f7a05e391bbf37dd75a3c37a1c135b",
+    "/todo-list/assets/images/not-found-plug-amico.svg": "7249b7b32356f6426ebf102edd2d872327915edb",
+    "/todo-list/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
+    "/todo-list/index.html": "1c0a17a0a3d9dc2e683b5c9e04afc2988658c552",
+    "/todo-list/main.0f0496336dfbb543.js": "61aa7c47912a80f33badc8d9defeca4857553c76",
+    "/todo-list/manifest.webmanifest": "9470b23185051fd04b5d805f3f67d282efc30517",
+    "/todo-list/polyfills.68e90daf8691fa67.js": "313cbfc394da461313d1ffa1a48f789cf1e969dc",
+    "/todo-list/runtime.d41da47144c19a7b.js": "5670f3528d4822a9893627bceb6637c65f85b9a1",
+    "/todo-list/styles.6c22f709a3a456ef.css": "0d47dbe6d6293701fded07e199f559d087e84d34"
+  },
+  "navigationUrls": [
+    {
+      "positive": true,
+      "regex": "^\\/.*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*\\.[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*$"
+    },
+    {
+      "positive": false,
+      "regex": "^\\/(?:.+\\/)?[^/]*__[^/]*\\/.*$"
+    }
+  ],
+  "navigationRequestStrategy": "performance"
+}
