@@ -1,14 +1,14 @@
-# Store App
-
-A web application to show Categories with Products for user and the admin can manage this products.
+# Todo list App
 
 ## Features
 
-- Authentication
-
-- Products
-
-- Services
+- Convert the image in an attachment to HTML, SCSS to be (responsive and support multi directions (RTL-LTR))
+- Create a new angular project.
+- Integrate the static files inside angular (convert to components).
+- Create an external API.
+- Call API inside angular.
+- Make operations on the to-do list (Create new, Edit current, List all to-dos and remove to-do item, search in the todolist)
+- Create a build for the angular project.
 
 ## Technologies & Packages
 
@@ -24,21 +24,18 @@ Project is created with:
   - Standalone Components
   - Strong Typed Forms
   - Streamlined Page Title accessibility
-  - Ng Optimized Image
 - Typescript
 - RxJS
 - ngx-translation
 - shared components
-- angular material
 - HTML
 - SCSS
-- Tailwind CSS
 - ngx-progressbar
 - ngx-toastr
 
 ## Clone app
 
-git clone `https://github.com/shshinyo/to-do-task.git`
+git clone `https://github.com/M-Hamo/todo-list.git`
 
 ## Setup
 
