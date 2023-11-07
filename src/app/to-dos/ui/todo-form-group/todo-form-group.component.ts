@@ -13,6 +13,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ToDo } from '../../utils';
 import { ToastrService } from 'ngx-toastr';
 import { TranslateService } from '@ngx-translate/core';
+import { ToDoService } from '../../services';
 
 @Component({
   selector: 'todo-form-group',
@@ -23,7 +24,8 @@ export class TodoFormGroupComponent implements OnInit {
   public constructor(
     private readonly _fb: FormBuilder,
     private readonly _toasterService: ToastrService,
-    private readonly _translateService: TranslateService
+    private readonly _translateService: TranslateService,
+    private readonly _toDoService: ToDoService
   ) {}
   @ViewChild('nameInput') public nameInput!: ElementRef<HTMLInputElement>;
 
@@ -58,7 +60,17 @@ export class TodoFormGroupComponent implements OnInit {
   public onSaveValue = (): void => {
     if (this.todoForm.valid) {
       const name: string = this.todoForm.get('name')?.value as string;
-      this.onEditTodo.emit({ ...this.todo, name });
+
+      const isExist: boolean = !!this._toDoService
+        .todoListItems()
+        ?.find((item: ToDo) => item?.name === name?.trim());
+
+      if (isExist) {
+        this._toasterService.warning('Todo is already exist');
+        return;
+      }
+
+      this.onEditTodo.emit({ ...this.todo, name: name?.trim() });
 
       this._toasterService.success(
         this._translateService.instant(
